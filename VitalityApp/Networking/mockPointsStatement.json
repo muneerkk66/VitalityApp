@@ -1,0 +1,44 @@
+{
+    "userId": 874897423,
+    "name": "Jeremy",
+    "surname": "Smith",
+    "totalPoints": 2392,
+    "vitalityStatus": "Gold",
+    "leaderboard": [
+        {
+            "userId": 982479864239,
+            "name" : "John",
+            "totalPoints": 2167
+        },
+        {
+            "userId": 52345662626,
+            "name" : "Sarah",
+            "totalPoints": 2067
+        },
+        {
+            "userId": 564369680404,
+            "name" : "Brandon",
+            "totalPoints": 367
+        },
+        {
+            "userId": 874897423,
+            "name" : "Jeremy",
+            "totalPoints": 2392
+        },
+        {
+            "userId": 953485097534,
+            "name" : "Josh",
+            "totalPoints": 3367
+        },
+        {
+            "userId": 23408329004,
+            "name" : "Thapelo",
+            "totalPoints": 5367
+        },
+        {
+            "userId": 114499579209,
+            "name" : "Bronwyn",
+            "totalPoints": 1267
+        }
+    ]
+  }
