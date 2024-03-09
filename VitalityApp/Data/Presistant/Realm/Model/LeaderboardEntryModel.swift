@@ -1,7 +1,7 @@
 import Foundation
 import RealmSwift
 
-public class LeaderboardEntryModel: Object, CachingDomain {
+public class LeaderboardEntryModel: Object {
     @Persisted var userID: Int
     @Persisted var name: String
     @Persisted var totalPoints: Int
@@ -12,4 +12,5 @@ public class LeaderboardEntryModel: Object, CachingDomain {
         self.name = entity.name
         self.totalPoints = entity.totalPoints
     }
+
 }

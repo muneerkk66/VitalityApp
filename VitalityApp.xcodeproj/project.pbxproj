@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083E82682B9CC9DB00ECD2DC /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */; };
+		083E826A2B9CCAFD00ECD2DC /* StatementLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */; };
 		08D5E98C2B9BA09000A2C82F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */; };
 		08D5E98E2B9BA0B000A2C82F /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */; };
 		08D5E9912B9BA15E00A2C82F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */; };
@@ -43,7 +45,6 @@
 		538A0A262AF8E6E8002D2027 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 538A0A252AF8E6E8002D2027 /* Realm */; };
 		538A0A282AF8E6E8002D2027 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 538A0A272AF8E6E8002D2027 /* RealmSwift */; };
 		538A0A322AF9083F002D2027 /* mockPointsStatement.json in Resources */ = {isa = PBXBuildFile; fileRef = 538A0A312AF9083F002D2027 /* mockPointsStatement.json */; };
-		538A0A372AF910D1002D2027 /* RealmAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A362AF910D1002D2027 /* RealmAdapter.swift */; };
 		538A0A3A2AF912B5002D2027 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A392AF912B5002D2027 /* Resolver.swift */; };
 		538A0A422AFA3B0E002D2027 /* StatementResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A412AFA3B0E002D2027 /* StatementResponse.swift */; };
 		53B9B0DC2AFBC4FD0004B381 /* VitalityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9B0DB2AFBC4FD0004B381 /* VitalityAppTests.swift */; };
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementLocalDataSource.swift; sourceTree = "<group>"; };
 		08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
 		08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		538A0A112AF8D575002D2027 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		538A0A222AF8E55D002D2027 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		538A0A312AF9083F002D2027 /* mockPointsStatement.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockPointsStatement.json; sourceTree = "<group>"; };
-		538A0A362AF910D1002D2027 /* RealmAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAdapter.swift; sourceTree = "<group>"; };
 		538A0A392AF912B5002D2027 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		538A0A412AFA3B0E002D2027 /* StatementResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementResponse.swift; sourceTree = "<group>"; };
 		53B9B0D92AFBC4FD0004B381 /* VitalityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitalityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083E826B2B9CCBC000ECD2DC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				083E826C2B9CCBCD00ECD2DC /* Model */,
+				083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		083E826C2B9CCBCD00ECD2DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A222AF8E55D002D2027 /* UserInfoModel.swift */,
+				53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		083E826D2B9CCBD900ECD2DC /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		08D5E97D2B9B887700A2C82F /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,9 +262,8 @@
 		08D5E9892B9B98AC00A2C82F /* Presistant */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A222AF8E55D002D2027 /* UserInfoModel.swift */,
-				538A0A362AF910D1002D2027 /* RealmAdapter.swift */,
-				53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */,
+				083E826D2B9CCBD900ECD2DC /* DataSources */,
+				083E826B2B9CCBC000ECD2DC /* Realm */,
 			);
 			path = Presistant;
 			sourceTree = "<group>";
@@ -515,16 +542,17 @@
 				53B9B0E32AFBC6320004B381 /* LeaderboardEntryModel.swift in Sources */,
 				538A0A232AF8E55D002D2027 /* UserInfoModel.swift in Sources */,
 				08D5E9CA2B9C7BE300A2C82F /* Parser.swift in Sources */,
+				083E826A2B9CCAFD00ECD2DC /* StatementLocalDataSource.swift in Sources */,
 				08D5E9952B9BA20F00A2C82F /* HomeCoordinatorView.swift in Sources */,
 				08D5E9BE2B9C6B5700A2C82F /* AppEnvironemnt.swift in Sources */,
 				08D5E9B02B9C385600A2C82F /* LeaderBoard.swift in Sources */,
 				08D5E9DB2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift in Sources */,
 				08D5E9C82B9C6D2600A2C82F /* APIClient.swift in Sources */,
 				08D5E9AC2B9C36A800A2C82F /* StatementRepository+Live.swift in Sources */,
+				083E82682B9CC9DB00ECD2DC /* RealmProvider.swift in Sources */,
 				538A0A0B2AF8D572002D2027 /* VitalityApp.swift in Sources */,
 				08D5E9912B9BA15E00A2C82F /* HomeCoordinator.swift in Sources */,
 				08D5E9C62B9C6D0500A2C82F /* APIClientLive.swift in Sources */,
-				538A0A372AF910D1002D2027 /* RealmAdapter.swift in Sources */,
 				08D5E98E2B9BA0B000A2C82F /* AppCoordinatorView.swift in Sources */,
 				08D5E9AE2B9C36D600A2C82F /* StatementRepository.swift in Sources */,
 				08D5E9C42B9C6C9900A2C82F /* Logger.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 import RealmSwift
 
-public class UserInfoModel: Object, CachingDomain, Identifiable {
+public class UserInfoModel: Object {
     @Persisted var userID: Int
     @Persisted var name: String
     @Persisted var surname: String
