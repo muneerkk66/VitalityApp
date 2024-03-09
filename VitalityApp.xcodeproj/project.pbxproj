@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		083E82682B9CC9DB00ECD2DC /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */; };
 		083E826A2B9CCAFD00ECD2DC /* StatementLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */; };
+		083E82712B9CCCBB00ECD2DC /* CombinePublisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */; };
+		083E82732B9CCCEF00ECD2DC /* StatementServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82722B9CCCEF00ECD2DC /* StatementServiceTests.swift */; };
+		083E82752B9CCD4B00ECD2DC /* MockStatementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82742B9CCD4B00ECD2DC /* MockStatementService.swift */; };
+		083E82772B9CCDBD00ECD2DC /* MockStatementResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82762B9CCDBD00ECD2DC /* MockStatementResponse.swift */; };
 		08D5E98C2B9BA09000A2C82F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */; };
 		08D5E98E2B9BA0B000A2C82F /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */; };
 		08D5E9912B9BA15E00A2C82F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */; };
@@ -64,6 +68,10 @@
 /* Begin PBXFileReference section */
 		083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementLocalDataSource.swift; sourceTree = "<group>"; };
+		083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublisherTest.swift; sourceTree = "<group>"; };
+		083E82722B9CCCEF00ECD2DC /* StatementServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementServiceTests.swift; sourceTree = "<group>"; };
+		083E82742B9CCD4B00ECD2DC /* MockStatementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementService.swift; sourceTree = "<group>"; };
+		083E82762B9CCDBD00ECD2DC /* MockStatementResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementResponse.swift; sourceTree = "<group>"; };
 		08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
 		08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -150,6 +158,23 @@
 				083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		083E826E2B9CCC9F00ECD2DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		083E826F2B9CCCA600ECD2DC /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				083E82742B9CCD4B00ECD2DC /* MockStatementService.swift */,
+				083E82762B9CCDBD00ECD2DC /* MockStatementResponse.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		08D5E97D2B9B887700A2C82F /* Application */ = {
@@ -409,7 +434,10 @@
 		53B9B0DA2AFBC4FD0004B381 /* VitalityAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				083E826F2B9CCCA600ECD2DC /* Mock */,
+				083E826E2B9CCC9F00ECD2DC /* Utils */,
 				53B9B0DB2AFBC4FD0004B381 /* VitalityAppTests.swift */,
+				083E82722B9CCCEF00ECD2DC /* StatementServiceTests.swift */,
 			);
 			path = VitalityAppTests;
 			sourceTree = "<group>";
@@ -566,6 +594,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083E82772B9CCDBD00ECD2DC /* MockStatementResponse.swift in Sources */,
+				083E82712B9CCCBB00ECD2DC /* CombinePublisherTest.swift in Sources */,
+				083E82752B9CCD4B00ECD2DC /* MockStatementService.swift in Sources */,
+				083E82732B9CCCEF00ECD2DC /* StatementServiceTests.swift in Sources */,
 				53B9B0DC2AFBC4FD0004B381 /* VitalityAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
