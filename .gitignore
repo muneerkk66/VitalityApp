@@ -4,8 +4,11 @@
 # Xcode User settings
 xcuserdata/
 
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# Xcode workspace
+*.xcworkspace/
+
+# Xcode workspace data file
+*.xcworkspace/contents.xcworkspacedata
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -26,13 +29,13 @@ xcuserdata/
 # Swift Package Manager
 #
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# *.xcodeproj
+Packages/
+Package.pins
+.xcodeproj
 #
 # Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
 # hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+.swiftpm
 
 .build/
 
