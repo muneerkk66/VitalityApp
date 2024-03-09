@@ -8,10 +8,10 @@ public class UserInfoModel: Object, CachingDomain, Identifiable {
     @Persisted var totalPoints: Int
     @Persisted var vitalityStatus: String
     @Persisted var leaderboard: List<LeaderboardEntryModel>
-    
-    public convenience init(entity: UserInfo) {
+
+    public convenience init(entity: StatementResponse) {
         self.init()
-        self.userID = entity.userID
+        self.userID = entity.userId
         self.name = entity.name
         self.surname = entity.surname
         self.totalPoints = entity.totalPoints

@@ -7,25 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		538A0A0B2AF8D572002D2027 /* VitalityOnboardingAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A0A2AF8D572002D2027 /* VitalityOnboardingAssessmentApp.swift */; };
-		538A0A0D2AF8D572002D2027 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A0C2AF8D572002D2027 /* ContentView.swift */; };
+		08D5E98C2B9BA09000A2C82F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */; };
+		08D5E98E2B9BA0B000A2C82F /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */; };
+		08D5E9912B9BA15E00A2C82F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */; };
+		08D5E9932B9BA1F100A2C82F /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9922B9BA1F100A2C82F /* HomeCoordinatorProtocol.swift */; };
+		08D5E9952B9BA20F00A2C82F /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9942B9BA20F00A2C82F /* HomeCoordinatorView.swift */; };
+		08D5E9992B9BA26000A2C82F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9982B9BA26000A2C82F /* HomeViewModel.swift */; };
+		08D5E99D2B9BA33F00A2C82F /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E99C2B9BA33F00A2C82F /* Routable.swift */; };
+		08D5E99F2B9BA35D00A2C82F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E99E2B9BA35D00A2C82F /* Coordinator.swift */; };
+		08D5E9A62B9BA51C00A2C82F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9A52B9BA51C00A2C82F /* DetailView.swift */; };
+		08D5E9A82B9BA80E00A2C82F /* FetchStatementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9A72B9BA80E00A2C82F /* FetchStatementUseCase.swift */; };
+		08D5E9AC2B9C36A800A2C82F /* StatementRepository+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9AB2B9C36A800A2C82F /* StatementRepository+Live.swift */; };
+		08D5E9AE2B9C36D600A2C82F /* StatementRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9AD2B9C36D600A2C82F /* StatementRepository.swift */; };
+		08D5E9B02B9C385600A2C82F /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9AF2B9C385600A2C82F /* LeaderBoard.swift */; };
+		08D5E9B22B9C550600A2C82F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9B12B9C550600A2C82F /* Formatter.swift */; };
+		08D5E9B42B9C583000A2C82F /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9B32B9C583000A2C82F /* UserCard.swift */; };
+		08D5E9B62B9C59EB00A2C82F /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9B52B9C59EB00A2C82F /* Statement.swift */; };
+		08D5E9BA2B9C67E100A2C82F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9B92B9C67E100A2C82F /* User.swift */; };
+		08D5E9BC2B9C6B2D00A2C82F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9BB2B9C6B2D00A2C82F /* APIError.swift */; };
+		08D5E9BE2B9C6B5700A2C82F /* AppEnvironemnt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9BD2B9C6B5700A2C82F /* AppEnvironemnt.swift */; };
+		08D5E9C42B9C6C9900A2C82F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9C32B9C6C9900A2C82F /* Logger.swift */; };
+		08D5E9C62B9C6D0500A2C82F /* APIClientLive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9C52B9C6D0500A2C82F /* APIClientLive.swift */; };
+		08D5E9C82B9C6D2600A2C82F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9C72B9C6D2600A2C82F /* APIClient.swift */; };
+		08D5E9CA2B9C7BE300A2C82F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9C92B9C7BE300A2C82F /* Parser.swift */; };
+		08D5E9CC2B9C7F8800A2C82F /* StatementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9CB2B9C7F8800A2C82F /* StatementService.swift */; };
+		08D5E9CE2B9C7F9700A2C82F /* StatementService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9CD2B9C7F9700A2C82F /* StatementService+Live.swift */; };
+		08D5E9D72B9C928600A2C82F /* UserCard+DomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9D62B9C928600A2C82F /* UserCard+DomainMapper.swift */; };
+		08D5E9DB2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5E9DA2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift */; };
+		538A0A0B2AF8D572002D2027 /* VitalityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A0A2AF8D572002D2027 /* VitalityApp.swift */; };
+		538A0A0D2AF8D572002D2027 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A0C2AF8D572002D2027 /* HomeView.swift */; };
 		538A0A0F2AF8D575002D2027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538A0A0E2AF8D575002D2027 /* Assets.xcassets */; };
 		538A0A122AF8D575002D2027 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538A0A112AF8D575002D2027 /* Preview Assets.xcassets */; };
 		538A0A1A2AF8D5C4002D2027 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 538A0A192AF8D5C4002D2027 /* Swinject */; };
-		538A0A202AF8D85A002D2027 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A1F2AF8D859002D2027 /* MockAPI.swift */; };
 		538A0A232AF8E55D002D2027 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A222AF8E55D002D2027 /* UserInfoModel.swift */; };
 		538A0A262AF8E6E8002D2027 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 538A0A252AF8E6E8002D2027 /* Realm */; };
 		538A0A282AF8E6E8002D2027 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 538A0A272AF8E6E8002D2027 /* RealmSwift */; };
-		538A0A2A2AF8FC01002D2027 /* PointsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A292AF8FC01002D2027 /* PointsResponse.swift */; };
-		538A0A2D2AF901B3002D2027 /* DummyJSONFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A2C2AF901B3002D2027 /* DummyJSONFetcher.swift */; };
 		538A0A322AF9083F002D2027 /* mockPointsStatement.json in Resources */ = {isa = PBXBuildFile; fileRef = 538A0A312AF9083F002D2027 /* mockPointsStatement.json */; };
-		538A0A352AF909C3002D2027 /* PointsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A342AF909C3002D2027 /* PointsGateway.swift */; };
 		538A0A372AF910D1002D2027 /* RealmAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A362AF910D1002D2027 /* RealmAdapter.swift */; };
-		538A0A3A2AF912B5002D2027 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A392AF912B5002D2027 /* AppDependencies.swift */; };
-		538A0A3F2AFA2030002D2027 /* ProtocolSubscribers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A3E2AFA2030002D2027 /* ProtocolSubscribers.swift */; };
-		538A0A422AFA3B0E002D2027 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A412AFA3B0E002D2027 /* UserInfo.swift */; };
-		538A0A442AFA3B24002D2027 /* LeaderboardEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A432AFA3B23002D2027 /* LeaderboardEntry.swift */; };
-		53B9B0DC2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9B0DB2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.swift */; };
+		538A0A3A2AF912B5002D2027 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A392AF912B5002D2027 /* Resolver.swift */; };
+		538A0A422AFA3B0E002D2027 /* StatementResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A412AFA3B0E002D2027 /* StatementResponse.swift */; };
+		53B9B0DC2AFBC4FD0004B381 /* VitalityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9B0DB2AFBC4FD0004B381 /* VitalityAppTests.swift */; };
 		53B9B0E32AFBC6320004B381 /* LeaderboardEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,24 +61,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		538A0A072AF8D572002D2027 /* VitalityOnboardingAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitalityOnboardingAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		538A0A0A2AF8D572002D2027 /* VitalityOnboardingAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityOnboardingAssessmentApp.swift; sourceTree = "<group>"; };
-		538A0A0C2AF8D572002D2027 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		08D5E9922B9BA1F100A2C82F /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		08D5E9942B9BA20F00A2C82F /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		08D5E9982B9BA26000A2C82F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		08D5E99C2B9BA33F00A2C82F /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		08D5E99E2B9BA35D00A2C82F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		08D5E9A52B9BA51C00A2C82F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		08D5E9A72B9BA80E00A2C82F /* FetchStatementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStatementUseCase.swift; sourceTree = "<group>"; };
+		08D5E9AB2B9C36A800A2C82F /* StatementRepository+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatementRepository+Live.swift"; sourceTree = "<group>"; };
+		08D5E9AD2B9C36D600A2C82F /* StatementRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRepository.swift; sourceTree = "<group>"; };
+		08D5E9AF2B9C385600A2C82F /* LeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		08D5E9B12B9C550600A2C82F /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		08D5E9B32B9C583000A2C82F /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		08D5E9B52B9C59EB00A2C82F /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		08D5E9B92B9C67E100A2C82F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		08D5E9BB2B9C6B2D00A2C82F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		08D5E9BD2B9C6B5700A2C82F /* AppEnvironemnt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironemnt.swift; sourceTree = "<group>"; };
+		08D5E9C32B9C6C9900A2C82F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		08D5E9C52B9C6D0500A2C82F /* APIClientLive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientLive.swift; sourceTree = "<group>"; };
+		08D5E9C72B9C6D2600A2C82F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		08D5E9C92B9C7BE300A2C82F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		08D5E9CB2B9C7F8800A2C82F /* StatementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementService.swift; sourceTree = "<group>"; };
+		08D5E9CD2B9C7F9700A2C82F /* StatementService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatementService+Live.swift"; sourceTree = "<group>"; };
+		08D5E9D62B9C928600A2C82F /* UserCard+DomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCard+DomainMapper.swift"; sourceTree = "<group>"; };
+		08D5E9DA2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeaderBoard+DomainMappper.swift"; sourceTree = "<group>"; };
+		538A0A072AF8D572002D2027 /* VitalityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VitalityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		538A0A0A2AF8D572002D2027 /* VitalityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityApp.swift; sourceTree = "<group>"; };
+		538A0A0C2AF8D572002D2027 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		538A0A0E2AF8D575002D2027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		538A0A112AF8D575002D2027 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		538A0A1F2AF8D859002D2027 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		538A0A222AF8E55D002D2027 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
-		538A0A292AF8FC01002D2027 /* PointsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsResponse.swift; sourceTree = "<group>"; };
-		538A0A2C2AF901B3002D2027 /* DummyJSONFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyJSONFetcher.swift; sourceTree = "<group>"; };
 		538A0A312AF9083F002D2027 /* mockPointsStatement.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockPointsStatement.json; sourceTree = "<group>"; };
-		538A0A342AF909C3002D2027 /* PointsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsGateway.swift; sourceTree = "<group>"; };
 		538A0A362AF910D1002D2027 /* RealmAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAdapter.swift; sourceTree = "<group>"; };
-		538A0A392AF912B5002D2027 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
-		538A0A3E2AFA2030002D2027 /* ProtocolSubscribers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolSubscribers.swift; sourceTree = "<group>"; };
-		538A0A412AFA3B0E002D2027 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		538A0A432AFA3B23002D2027 /* LeaderboardEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardEntry.swift; sourceTree = "<group>"; };
-		53B9B0D92AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitalityOnboardingAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B9B0DB2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityOnboardingAssessmentTests.swift; sourceTree = "<group>"; };
+		538A0A392AF912B5002D2027 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		538A0A412AFA3B0E002D2027 /* StatementResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementResponse.swift; sourceTree = "<group>"; };
+		53B9B0D92AFBC4FD0004B381 /* VitalityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VitalityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B9B0DB2AFBC4FD0004B381 /* VitalityAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityAppTests.swift; sourceTree = "<group>"; };
 		53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardEntryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,26 +124,216 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D5E97D2B9B887700A2C82F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A0A2AF8D572002D2027 /* VitalityApp.swift */,
+				538A0A382AF912A4002D2027 /* DependencyInjection */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		08D5E97E2B9B888100A2C82F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9A42B9BA50600A2C82F /* DetailView */,
+				08D5E99A2B9BA2C700A2C82F /* Common */,
+				08D5E9842B9B97F300A2C82F /* Home */,
+				08D5E9832B9B97D600A2C82F /* AppCoordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		08D5E97F2B9B888C00A2C82F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9872B9B985300A2C82F /* Interfaces */,
+				08D5E9862B9B984800A2C82F /* Entities */,
+				08D5E9852B9B984100A2C82F /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		08D5E9802B9B889400A2C82F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9CF2B9C8DD500A2C82F /* Mapper */,
+				08D5E98A2B9B98B700A2C82F /* Network */,
+				08D5E9892B9B98AC00A2C82F /* Presistant */,
+				08D5E9882B9B989000A2C82F /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		08D5E9812B9B889A00A2C82F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9B12B9C550600A2C82F /* Formatter.swift */,
+				08D5E9C32B9C6C9900A2C82F /* Logger.swift */,
+				08D5E9C92B9C7BE300A2C82F /* Parser.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		08D5E9832B9B97D600A2C82F /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E98B2B9BA09000A2C82F /* AppCoordinator.swift */,
+				08D5E98D2B9BA0B000A2C82F /* AppCoordinatorView.swift */,
+				08D5E99C2B9BA33F00A2C82F /* Routable.swift */,
+				08D5E99E2B9BA35D00A2C82F /* Coordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		08D5E9842B9B97F300A2C82F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9972B9BA24800A2C82F /* View */,
+				08D5E9962B9BA24000A2C82F /* ViewModel */,
+				08D5E98F2B9BA14400A2C82F /* Coordinator */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		08D5E9852B9B984100A2C82F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9A72B9BA80E00A2C82F /* FetchStatementUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		08D5E9862B9B984800A2C82F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9AF2B9C385600A2C82F /* LeaderBoard.swift */,
+				08D5E9B32B9C583000A2C82F /* UserCard.swift */,
+				08D5E9B52B9C59EB00A2C82F /* Statement.swift */,
+				08D5E9B92B9C67E100A2C82F /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		08D5E9872B9B985300A2C82F /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9AD2B9C36D600A2C82F /* StatementRepository.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		08D5E9882B9B989000A2C82F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9AB2B9C36A800A2C82F /* StatementRepository+Live.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		08D5E9892B9B98AC00A2C82F /* Presistant */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A222AF8E55D002D2027 /* UserInfoModel.swift */,
+				538A0A362AF910D1002D2027 /* RealmAdapter.swift */,
+				53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */,
+			);
+			path = Presistant;
+			sourceTree = "<group>";
+		};
+		08D5E98A2B9B98B700A2C82F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9CB2B9C7F8800A2C82F /* StatementService.swift */,
+				08D5E9CD2B9C7F9700A2C82F /* StatementService+Live.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		08D5E98F2B9BA14400A2C82F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9902B9BA15E00A2C82F /* HomeCoordinator.swift */,
+				08D5E9922B9BA1F100A2C82F /* HomeCoordinatorProtocol.swift */,
+				08D5E9942B9BA20F00A2C82F /* HomeCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		08D5E9962B9BA24000A2C82F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9982B9BA26000A2C82F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08D5E9972B9BA24800A2C82F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A0C2AF8D572002D2027 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08D5E99A2B9BA2C700A2C82F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E99B2B9BA2E200A2C82F /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		08D5E99B2B9BA2E200A2C82F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		08D5E9A42B9BA50600A2C82F /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9A52B9BA51C00A2C82F /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		08D5E9CF2B9C8DD500A2C82F /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A412AFA3B0E002D2027 /* StatementResponse.swift */,
+				08D5E9D62B9C928600A2C82F /* UserCard+DomainMapper.swift */,
+				08D5E9DA2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		08D5E9DE2B9CB68300A2C82F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				538A0A312AF9083F002D2027 /* mockPointsStatement.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		530F7E8A2AFBC95100883A8B /* API */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A1F2AF8D859002D2027 /* MockAPI.swift */,
+				08D5E9BB2B9C6B2D00A2C82F /* APIError.swift */,
+				08D5E9BD2B9C6B5700A2C82F /* AppEnvironemnt.swift */,
+				08D5E9C52B9C6D0500A2C82F /* APIClientLive.swift */,
+				08D5E9C72B9C6D2600A2C82F /* APIClient.swift */,
 			);
 			name = API;
-			sourceTree = "<group>";
-		};
-		530F7E8B2AFBC97B00883A8B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		538A09FE2AF8D572002D2027 = {
 			isa = PBXGroup;
 			children = (
-				538A0A092AF8D572002D2027 /* VitalityOnboardingAssessment */,
-				53B9B0DA2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests */,
+				538A0A092AF8D572002D2027 /* VitalityApp */,
+				53B9B0DA2AFBC4FD0004B381 /* VitalityAppTests */,
 				538A0A082AF8D572002D2027 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,25 +341,26 @@
 		538A0A082AF8D572002D2027 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A072AF8D572002D2027 /* VitalityOnboardingAssessment.app */,
-				53B9B0D92AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.xctest */,
+				538A0A072AF8D572002D2027 /* VitalityApp.app */,
+				53B9B0D92AFBC4FD0004B381 /* VitalityAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		538A0A092AF8D572002D2027 /* VitalityOnboardingAssessment */ = {
+		538A0A092AF8D572002D2027 /* VitalityApp */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A402AFA3AEE002D2027 /* Entities */,
-				538A0A382AF912A4002D2027 /* DependencyInjection */,
-				538A0A212AF8DC9F002D2027 /* Persistence */,
-				538A0A1E2AF8D831002D2027 /* Networking */,
-				538A0A0A2AF8D572002D2027 /* VitalityOnboardingAssessmentApp.swift */,
-				538A0A0C2AF8D572002D2027 /* ContentView.swift */,
+				08D5E9DE2B9CB68300A2C82F /* Resources */,
+				08D5E97D2B9B887700A2C82F /* Application */,
+				08D5E97E2B9B888100A2C82F /* Presentation */,
+				08D5E97F2B9B888C00A2C82F /* Domain */,
+				08D5E9802B9B889400A2C82F /* Data */,
+				08D5E9812B9B889A00A2C82F /* Utils */,
+				530F7E8A2AFBC95100883A8B /* API */,
 				538A0A0E2AF8D575002D2027 /* Assets.xcassets */,
 				538A0A102AF8D575002D2027 /* Preview Content */,
 			);
-			path = VitalityOnboardingAssessment;
+			path = VitalityApp;
 			sourceTree = "<group>";
 		};
 		538A0A102AF8D575002D2027 /* Preview Content */ = {
@@ -138,77 +371,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		538A0A1E2AF8D831002D2027 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				530F7E8A2AFBC95100883A8B /* API */,
-				538A0A332AF909A2002D2027 /* Gateway */,
-				538A0A2B2AF901A0002D2027 /* Helpers */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		538A0A212AF8DC9F002D2027 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				538A0A222AF8E55D002D2027 /* UserInfoModel.swift */,
-				538A0A362AF910D1002D2027 /* RealmAdapter.swift */,
-				53B9B0E22AFBC6320004B381 /* LeaderboardEntryModel.swift */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		538A0A2B2AF901A0002D2027 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				538A0A292AF8FC01002D2027 /* PointsResponse.swift */,
-				538A0A2C2AF901B3002D2027 /* DummyJSONFetcher.swift */,
-				538A0A312AF9083F002D2027 /* mockPointsStatement.json */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
-		538A0A332AF909A2002D2027 /* Gateway */ = {
-			isa = PBXGroup;
-			children = (
-				538A0A342AF909C3002D2027 /* PointsGateway.swift */,
-			);
-			name = Gateway;
-			sourceTree = "<group>";
-		};
 		538A0A382AF912A4002D2027 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				530F7E8B2AFBC97B00883A8B /* Helpers */,
-				538A0A392AF912B5002D2027 /* AppDependencies.swift */,
-				538A0A3E2AFA2030002D2027 /* ProtocolSubscribers.swift */,
+				538A0A392AF912B5002D2027 /* Resolver.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
-		538A0A402AFA3AEE002D2027 /* Entities */ = {
+		53B9B0DA2AFBC4FD0004B381 /* VitalityAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A412AFA3B0E002D2027 /* UserInfo.swift */,
-				538A0A432AFA3B23002D2027 /* LeaderboardEntry.swift */,
+				53B9B0DB2AFBC4FD0004B381 /* VitalityAppTests.swift */,
 			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		53B9B0DA2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests */ = {
-			isa = PBXGroup;
-			children = (
-				53B9B0DB2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.swift */,
-			);
-			path = VitalityOnboardingAssessmentTests;
+			path = VitalityAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		538A0A062AF8D572002D2027 /* VitalityOnboardingAssessment */ = {
+		538A0A062AF8D572002D2027 /* VitalityApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 538A0A152AF8D575002D2027 /* Build configuration list for PBXNativeTarget "VitalityOnboardingAssessment" */;
+			buildConfigurationList = 538A0A152AF8D575002D2027 /* Build configuration list for PBXNativeTarget "VitalityApp" */;
 			buildPhases = (
 				538A0A032AF8D572002D2027 /* Sources */,
 				538A0A042AF8D572002D2027 /* Frameworks */,
@@ -218,19 +402,19 @@
 			);
 			dependencies = (
 			);
-			name = VitalityOnboardingAssessment;
+			name = VitalityApp;
 			packageProductDependencies = (
 				538A0A192AF8D5C4002D2027 /* Swinject */,
 				538A0A252AF8E6E8002D2027 /* Realm */,
 				538A0A272AF8E6E8002D2027 /* RealmSwift */,
 			);
 			productName = VitalityOnboardingAssessment;
-			productReference = 538A0A072AF8D572002D2027 /* VitalityOnboardingAssessment.app */;
+			productReference = 538A0A072AF8D572002D2027 /* VitalityApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		53B9B0D82AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests */ = {
+		53B9B0D82AFBC4FD0004B381 /* VitalityAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53B9B0E12AFBC4FD0004B381 /* Build configuration list for PBXNativeTarget "VitalityOnboardingAssessmentTests" */;
+			buildConfigurationList = 53B9B0E12AFBC4FD0004B381 /* Build configuration list for PBXNativeTarget "VitalityAppTests" */;
 			buildPhases = (
 				53B9B0D52AFBC4FD0004B381 /* Sources */,
 				53B9B0D62AFBC4FD0004B381 /* Frameworks */,
@@ -241,9 +425,9 @@
 			dependencies = (
 				53B9B0DE2AFBC4FD0004B381 /* PBXTargetDependency */,
 			);
-			name = VitalityOnboardingAssessmentTests;
+			name = VitalityAppTests;
 			productName = VitalityOnboardingAssessmentTests;
-			productReference = 53B9B0D92AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.xctest */;
+			productReference = 53B9B0D92AFBC4FD0004B381 /* VitalityAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +449,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 538A0A022AF8D572002D2027 /* Build configuration list for PBXProject "VitalityOnboardingAssessment" */;
+			buildConfigurationList = 538A0A022AF8D572002D2027 /* Build configuration list for PBXProject "VitalityApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -282,8 +466,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				538A0A062AF8D572002D2027 /* VitalityOnboardingAssessment */,
-				53B9B0D82AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests */,
+				538A0A062AF8D572002D2027 /* VitalityApp */,
+				53B9B0D82AFBC4FD0004B381 /* VitalityAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,19 +497,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538A0A442AFA3B24002D2027 /* LeaderboardEntry.swift in Sources */,
-				538A0A352AF909C3002D2027 /* PointsGateway.swift in Sources */,
-				538A0A2D2AF901B3002D2027 /* DummyJSONFetcher.swift in Sources */,
-				538A0A0D2AF8D572002D2027 /* ContentView.swift in Sources */,
-				538A0A3A2AF912B5002D2027 /* AppDependencies.swift in Sources */,
-				538A0A422AFA3B0E002D2027 /* UserInfo.swift in Sources */,
+				08D5E9992B9BA26000A2C82F /* HomeViewModel.swift in Sources */,
+				08D5E9D72B9C928600A2C82F /* UserCard+DomainMapper.swift in Sources */,
+				08D5E9A62B9BA51C00A2C82F /* DetailView.swift in Sources */,
+				08D5E9B62B9C59EB00A2C82F /* Statement.swift in Sources */,
+				08D5E9932B9BA1F100A2C82F /* HomeCoordinatorProtocol.swift in Sources */,
+				08D5E9BA2B9C67E100A2C82F /* User.swift in Sources */,
+				08D5E9B22B9C550600A2C82F /* Formatter.swift in Sources */,
+				08D5E9A82B9BA80E00A2C82F /* FetchStatementUseCase.swift in Sources */,
+				08D5E9CC2B9C7F8800A2C82F /* StatementService.swift in Sources */,
+				538A0A0D2AF8D572002D2027 /* HomeView.swift in Sources */,
+				538A0A3A2AF912B5002D2027 /* Resolver.swift in Sources */,
+				538A0A422AFA3B0E002D2027 /* StatementResponse.swift in Sources */,
+				08D5E9BC2B9C6B2D00A2C82F /* APIError.swift in Sources */,
+				08D5E98C2B9BA09000A2C82F /* AppCoordinator.swift in Sources */,
+				08D5E9CE2B9C7F9700A2C82F /* StatementService+Live.swift in Sources */,
 				53B9B0E32AFBC6320004B381 /* LeaderboardEntryModel.swift in Sources */,
 				538A0A232AF8E55D002D2027 /* UserInfoModel.swift in Sources */,
-				538A0A2A2AF8FC01002D2027 /* PointsResponse.swift in Sources */,
-				538A0A3F2AFA2030002D2027 /* ProtocolSubscribers.swift in Sources */,
-				538A0A202AF8D85A002D2027 /* MockAPI.swift in Sources */,
-				538A0A0B2AF8D572002D2027 /* VitalityOnboardingAssessmentApp.swift in Sources */,
+				08D5E9CA2B9C7BE300A2C82F /* Parser.swift in Sources */,
+				08D5E9952B9BA20F00A2C82F /* HomeCoordinatorView.swift in Sources */,
+				08D5E9BE2B9C6B5700A2C82F /* AppEnvironemnt.swift in Sources */,
+				08D5E9B02B9C385600A2C82F /* LeaderBoard.swift in Sources */,
+				08D5E9DB2B9C9CE300A2C82F /* LeaderBoard+DomainMappper.swift in Sources */,
+				08D5E9C82B9C6D2600A2C82F /* APIClient.swift in Sources */,
+				08D5E9AC2B9C36A800A2C82F /* StatementRepository+Live.swift in Sources */,
+				538A0A0B2AF8D572002D2027 /* VitalityApp.swift in Sources */,
+				08D5E9912B9BA15E00A2C82F /* HomeCoordinator.swift in Sources */,
+				08D5E9C62B9C6D0500A2C82F /* APIClientLive.swift in Sources */,
 				538A0A372AF910D1002D2027 /* RealmAdapter.swift in Sources */,
+				08D5E98E2B9BA0B000A2C82F /* AppCoordinatorView.swift in Sources */,
+				08D5E9AE2B9C36D600A2C82F /* StatementRepository.swift in Sources */,
+				08D5E9C42B9C6C9900A2C82F /* Logger.swift in Sources */,
+				08D5E99D2B9BA33F00A2C82F /* Routable.swift in Sources */,
+				08D5E9B42B9C583000A2C82F /* UserCard.swift in Sources */,
+				08D5E99F2B9BA35D00A2C82F /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53B9B0DC2AFBC4FD0004B381 /* VitalityOnboardingAssessmentTests.swift in Sources */,
+				53B9B0DC2AFBC4FD0004B381 /* VitalityAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +547,7 @@
 /* Begin PBXTargetDependency section */
 		53B9B0DE2AFBC4FD0004B381 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 538A0A062AF8D572002D2027 /* VitalityOnboardingAssessment */;
+			target = 538A0A062AF8D572002D2027 /* VitalityApp */;
 			targetProxy = 53B9B0DD2AFBC4FD0004B381 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,7 +674,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VitalityOnboardingAssessment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"VitalityApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 69FLZ3N89E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,7 +703,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"VitalityOnboardingAssessment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"VitalityApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 69FLZ3N89E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -534,7 +739,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VitalityOnboardingAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VitalityOnboardingAssessment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VitalityApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VitalityApp";
 			};
 			name = Debug;
 		};
@@ -552,14 +757,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VitalityOnboardingAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VitalityOnboardingAssessment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VitalityApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VitalityApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		538A0A022AF8D572002D2027 /* Build configuration list for PBXProject "VitalityOnboardingAssessment" */ = {
+		538A0A022AF8D572002D2027 /* Build configuration list for PBXProject "VitalityApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				538A0A132AF8D575002D2027 /* Debug */,
@@ -568,7 +773,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		538A0A152AF8D575002D2027 /* Build configuration list for PBXNativeTarget "VitalityOnboardingAssessment" */ = {
+		538A0A152AF8D575002D2027 /* Build configuration list for PBXNativeTarget "VitalityApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				538A0A162AF8D575002D2027 /* Debug */,
@@ -577,7 +782,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53B9B0E12AFBC4FD0004B381 /* Build configuration list for PBXNativeTarget "VitalityOnboardingAssessmentTests" */ = {
+		53B9B0E12AFBC4FD0004B381 /* Build configuration list for PBXNativeTarget "VitalityAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53B9B0DF2AFBC4FD0004B381 /* Debug */,

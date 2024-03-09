@@ -2,14 +2,15 @@ import SwiftUI
 
 @main
 struct VitalityOnboardingAssessmentApp: App {
-    
+
     init() {
-        AppDependencies.bind()
+        // Injecting all dependencies
+        Resolver.shared.injectModules()
     }
-    
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinatorView()
         }
     }
 }

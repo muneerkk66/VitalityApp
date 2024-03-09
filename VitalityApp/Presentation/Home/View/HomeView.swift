@@ -2,14 +2,17 @@ import SwiftUI
 import RealmSwift
 import Combine
 
-struct ContentView: View {
+struct HomeView: View {
+    @StateObject var viewModel: HomeViewModel = Resolver.shared.resolve(HomeViewModel.self)
     var body: some View {
-        Text("Hello World")
+        Text("Hello World").onAppear {
+            viewModel.fetchStatement()
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

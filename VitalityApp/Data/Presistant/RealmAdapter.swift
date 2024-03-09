@@ -33,7 +33,7 @@ public protocol Database {
      - parameter filter: Will return all objects matching the given predicate in the collection.
      */
     func objects<T: VitalityObject>(_ type: T.Type, filteredBy filter: NSPredicate) -> [T]
-    
+
     /**
      Query to optionally return the first found instance of the data model type.
      - parameter type: The data models type.
@@ -95,7 +95,7 @@ public class RealmAdapter: Database, ObservableObject {
     public func objects<T: Object>(_ type: T.Type, filteredBy filter: String, _ args: Any...) -> [T] {
         return Array(realm.objects(type).filter(filter, args))
     }
-    
+
     public func objects<T: Object>(_ type: T.Type, filteredBy filter: NSPredicate) -> [T] {
         return Array(realm.objects(type).filter(filter))
     }
@@ -122,7 +122,7 @@ public class RealmAdapter: Database, ObservableObject {
             realm.add(insertions)
         }
     }
-    
+
     public func update(deletingSpecifically: [AnyObject] = [], insertions: [AnyObject] = []) throws {
         try transaction { realm in
             let insertions = insertions.compactMap {
@@ -135,7 +135,7 @@ public class RealmAdapter: Database, ObservableObject {
             realm.add(insertions)
         }
     }
-    
+
     public func clearDatabase() {
         do {
             try realm.write {
@@ -185,5 +185,3 @@ public class RealmAdapter: Database, ObservableObject {
         }
     }
 }
-
-
