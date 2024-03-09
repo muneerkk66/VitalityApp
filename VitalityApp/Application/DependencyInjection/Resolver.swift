@@ -33,6 +33,10 @@ extension Resolver {
             APIClientLive()
         }.inObjectScope(.container)
 
+        container.register(StatementLocalDataSource.self) { _ in
+            StatementLocalDataSource()
+        }.inObjectScope(.container)
+
     }
 }
 
@@ -68,7 +72,7 @@ extension Resolver {
 
     private func injectRepositories() {
         container.register(StatementRepositoryLive.self) { resolver in
-            StatementRepositoryLive(statementService: resolver.resolve(StatementServiceLive.self)!)
+            StatementRepositoryLive(localDataSource: resolver.resolve(StatementLocalDataSource.self)!, statementService: resolver.resolve(StatementServiceLive.self)!)
         }.inObjectScope(.container)
 
         container.register(HomeCoordinator.self) { _ in

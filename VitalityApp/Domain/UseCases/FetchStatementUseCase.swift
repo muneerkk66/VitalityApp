@@ -20,6 +20,6 @@ final class FetchStatementUseCaseLive: FetchStatementUseCase {
     }
 
     func execute() -> AnyPublisher<Statement, APIError> {
-        return statementRepository.fetchStatement()
+        return statementRepository.loadStatement()
     }
 }

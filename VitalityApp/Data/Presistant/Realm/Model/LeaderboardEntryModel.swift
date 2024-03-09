@@ -2,7 +2,7 @@ import Foundation
 import RealmSwift
 
 public class LeaderboardEntryModel: Object {
-    @Persisted var userID: Int
+    @Persisted(primaryKey: true) var userID: Int
     @Persisted var name: String
     @Persisted var totalPoints: Int
 

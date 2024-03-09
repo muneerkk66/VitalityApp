@@ -11,15 +11,17 @@ final class StatementLocalDataSource {
 
     private let realmProvider = RealmProvider()
 
-    func fetchStatement() async -> UserInfoModel? {
+	@BackgroundActor
+    func fetchStatement() async -> StatementModel? {
         guard let storage = await realmProvider.realm() else { return nil }
-        return storage.objects(UserInfoModel.self).first
+        return storage.objects(StatementModel.self).first
     }
 
-    func saveStatement(_ profileObject: UserInfoModel) async {
+    @BackgroundActor
+    func saveStatement(_ object: StatementModel) async {
         guard let storage = await realmProvider.realm() else { return }
         storage.writeAsync {
-            storage.add(profileObject, update: .all)
+            storage.add(object, update: .all)
         }
     }
 }

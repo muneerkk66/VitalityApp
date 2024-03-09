@@ -9,25 +9,44 @@ import Combine
 
 final class StatementRepositoryLive: StatementRepository {
 
-    private var statementService: StatementService
+    private var localDataSource: StatementLocalDataSource
+    private let statementService: StatementServiceLive
 
-    init(statementService: StatementService) {
+    init(localDataSource: StatementLocalDataSource, statementService: StatementServiceLive) {
+        self.localDataSource = localDataSource
         self.statementService = statementService
     }
 
-    func fetchStatement() -> AnyPublisher<Statement, APIError> {
+    private var loadedStatement: StatementResponse?
+
+    // TODO: Consider calling Data from Local when we integrate the actual API
+	// Used localDataSource fetchStatement() for calling Model from DB
+    func loadStatement() -> AnyPublisher<Statement, APIError> {
         return statementService
             .fetchStatement()
-            .map { result -> Statement in
+            .map {[weak self] result -> Statement in
 
                 let userCardModel = result.toCardDomain(leaderId: result.userId)
-                let leaderBoardModel = result.leaderboard.map {$0.toLeaderBoardDomain(leaderId: $0.userId, statementResponse: result)}.sorted {$0.rankValue < $1.rankValue}
-                return Statement(card: userCardModel, leaderBoard: leaderBoardModel)
+                let leaderBoardModel = result.leaderboard
+                    .map {$0.toLeaderBoardDomain(leaderId: $0.userId, statementResponse: result)}
+                    .sorted {$0.rankValue < $1.rankValue}
+
+                // Save Data in DB
+                self?.saveStatement(response: result)
+
+                let statement =  Statement(card: userCardModel, leaderBoard: leaderBoardModel)
+
+                return statement
 
             }.eraseToAnyPublisher()
     }
 
-    func saveStatement() {
+    func saveStatement(response: StatementResponse) {
+        Task {
+            let model = StatementModel(entity: response)
+            await localDataSource.saveStatement(model)
+            LogDebug("StatementResponse saved successful")
+        }
 
     }
 }

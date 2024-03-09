@@ -1,8 +1,8 @@
 import Foundation
 import RealmSwift
 
-public class UserInfoModel: Object {
-    @Persisted var userID: Int
+public class StatementModel: Object {
+    @Persisted(primaryKey: true) var userID: Int
     @Persisted var name: String
     @Persisted var surname: String
     @Persisted var totalPoints: Int

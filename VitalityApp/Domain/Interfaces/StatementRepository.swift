@@ -10,7 +10,7 @@ import Combine
 protocol StatementRepository {
 
     @discardableResult
-    func fetchStatement() -> AnyPublisher<Statement, APIError>
+    func loadStatement() -> AnyPublisher<Statement, APIError>
 
-    func saveStatement()
+    func saveStatement(response: StatementResponse)
 }
