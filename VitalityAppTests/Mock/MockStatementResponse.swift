@@ -21,6 +21,6 @@ struct MockData {
 
     static let userCard = UserCard(userId: 1, fullName: "", totalPoints: 1, rank: 1, status: "")
 
-    static let leaderBoard = LeaderBoard(userId: 1, name: "test", totalPoints: 1, rank: 1)
+    static let leaderBoard = Leader(leaderId: 1, name: "test", totalPoints: 1, rank: 1)
 
 }

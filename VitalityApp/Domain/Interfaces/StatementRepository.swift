@@ -8,7 +8,6 @@
 import Combine
 
 protocol StatementRepository {
-
     @discardableResult
     func loadStatement() -> AnyPublisher<Statement, APIError>
 

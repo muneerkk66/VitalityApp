@@ -13,7 +13,6 @@ import Foundation
 }
 actor RealmProvider {
     static var shared = BackgroundActor()
-
     private var  realm: Realm?
 
     func realm() async -> Realm? {

@@ -6,19 +6,19 @@
 //
 
 import Foundation
-struct LeaderBoard: Equatable {
-    let userId: Int
+struct Leader: Equatable {
+    let leaderId: Int
     let name: String
     let totalPoints: Int
     let rank: Int
 }
 
-extension LeaderBoard {
+extension Leader {
     func getPointTitle() -> String {
-        return String(describing: "\(totalPoints.delimiter ?? "") \(totalPoints.points ?? "")")
+		return String(describing: "\(totalPoints.delimiter.orEmpty) \(totalPoints.points.orEmpty)")
     }
 
-    func getLeaderTitle(leaderId: Int?) -> String {
+    func getLeaderTitle(userId: Int?) -> String {
 		return String(describing: userId == leaderId ? Strings.LeaderBoard.currentUserTitle : name).capitalized
     }
 }

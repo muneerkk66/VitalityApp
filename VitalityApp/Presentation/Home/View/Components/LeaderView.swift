@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LeaderView: View {
-    let leader: LeaderBoard
-    let userId: Int?
+    let leader: Leader
+    let currentUserId: Int?
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(leader.getLeaderTitle(leaderId: userId)).bold()
+                Text(leader.getLeaderTitle(userId: currentUserId)).bold()
                 Text(leader.getPointTitle())
             }
             Spacer()
@@ -24,5 +24,5 @@ struct LeaderView: View {
 }
 
 #Preview {
-    LeaderView(leader: MockData.leaderBoard, userId: 123)
+    LeaderView(leader: MockData.leaderBoard, currentUserId: 123)
 }

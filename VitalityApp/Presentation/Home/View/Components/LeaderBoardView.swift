@@ -13,8 +13,8 @@ struct LeaderBoardView: View {
     var body: some View {
         List {
             Section(header: Text(Strings.LeaderBoard.title)) {
-                ForEach(statement?.leaderBoard ?? [], id: \.userId) { leader in
-                    LeaderView(leader: leader, userId: statement?.card.userId)
+                ForEach(statement?.leaderboard ?? [], id: \.leaderId) { leader in
+					LeaderView(leader: leader, currentUserId: statement?.userCard.userId)
                 }
             }
         }
@@ -22,5 +22,5 @@ struct LeaderBoardView: View {
 }
 
 #Preview {
-    LeaderBoardView(statement: Statement(card: MockData.userCard, leaderBoard: [MockData.leaderBoard]))
+	LeaderBoardView(statement: Statement(userCard: MockData.userCard, leaderboard: [MockData.leaderBoard]))
 }

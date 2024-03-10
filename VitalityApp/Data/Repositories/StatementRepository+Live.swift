@@ -28,13 +28,13 @@ final class StatementRepositoryLive: StatementRepository {
 
                 let userCardModel = result.toCardDomain(leaderId: result.userId)
                 let leaderBoardModel = result.leaderboard
-                    .map {$0.toLeaderBoardDomain(leaderId: $0.userId, statementResponse: result)}
+                    .map {$0.toLeaderDomain(leaderId: $0.userId, statementResponse: result)}
                     .sorted {$0.rank < $1.rank}
 
                 // Save Data in DB
                 self?.saveStatement(response: result)
 
-                let statement =  Statement(card: userCardModel, leaderBoard: leaderBoardModel)
+				let statement =  Statement(userCard: userCardModel, leaderboard: leaderBoardModel)
 
                 return statement
 

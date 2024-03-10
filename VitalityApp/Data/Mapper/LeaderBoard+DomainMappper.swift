@@ -7,10 +7,10 @@
 
 import Foundation
 extension LeaderboardResponse {
-    func toLeaderBoardDomain(leaderId: Int, statementResponse: StatementResponse) -> LeaderBoard {
+    func toLeaderDomain(leaderId: Int, statementResponse: StatementResponse) -> Leader {
         let rank = statementResponse.calculateRank(leaderId: leaderId)
-        return LeaderBoard(
-            userId: leaderId,
+        return Leader(
+            leaderId: leaderId,
             name: name,
             totalPoints: totalPoints,
             rank: rank

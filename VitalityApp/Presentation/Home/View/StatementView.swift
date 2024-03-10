@@ -15,12 +15,14 @@ struct StatementView: View {
             ScrollView {
                 Spacer(minLength: Dimensions.space80)
                 VStack(alignment: .leading) {
-                    Text((viewModel.statement?.card.getCardTitle()).orEmpty)
+                    Text((viewModel.statement?.userCard.getCardTitle()).orEmpty)
                         .font(.system(size: Styles.fontSize.textLarge))
                         .bold()
                         .foregroundColor(.black)
                         .padding(.horizontal, Dimensions.space20)
-                    CardView(card: viewModel.statement?.card).listStyle(.plain)
+					
+                    CardView(card: viewModel.statement?.userCard).listStyle(.plain)
+
                     LeaderBoardView(statement: viewModel.statement).frame(width: proxy.size.width, height: proxy.size.height)
                 }
             }

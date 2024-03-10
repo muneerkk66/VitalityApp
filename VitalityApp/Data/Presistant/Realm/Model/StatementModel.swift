@@ -18,4 +18,8 @@ public class StatementModel: Object {
         self.vitalityStatus = entity.vitalityStatus
         self.leaderboard.append(objectsIn: entity.leaderboard.map(LeaderboardEntryModel.init))
     }
+
 }
+
+
+

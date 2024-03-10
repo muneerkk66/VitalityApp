@@ -7,6 +7,6 @@
 
 import Foundation
 struct Statement {
-    let card: UserCard
-    let leaderBoard: [LeaderBoard]
+    let userCard: UserCard
+    let leaderboard: [Leader]
 }

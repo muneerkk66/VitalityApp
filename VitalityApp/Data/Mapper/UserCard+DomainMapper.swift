@@ -21,10 +21,10 @@ extension StatementResponse {
         )
     }
 
-    func toLeaderBoardDomain(leaderId: Int) -> LeaderBoard {
+    func toLeaderBoardDomain(leaderId: Int) -> Leader {
         let rank = calculateRank(leaderId: leaderId)
-        return LeaderBoard(
-            userId: leaderId,
+        return Leader(
+            leaderId: leaderId,
             name: name,
             totalPoints: totalPoints,
             rank: rank
