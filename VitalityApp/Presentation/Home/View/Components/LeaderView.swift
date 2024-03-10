@@ -19,7 +19,7 @@ struct LeaderView: View {
             Spacer()
             Text((leader.rank.ordinal).orEmpty).foregroundStyle(.secondary)
                 .font(.subheadline)
-        }.padding(.horizontal, Dimensions.space4)
+        }.padding(.horizontal, Dimensions.space4).contentShape(Rectangle())
     }
 }
 

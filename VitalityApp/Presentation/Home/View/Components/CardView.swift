@@ -11,7 +11,7 @@ struct CardView: View {
     let card: UserCard?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Dimensions.space16) {
+        VStack(alignment: .leading) {
             header
             Spacer()
             footer
@@ -46,7 +46,7 @@ struct CardView: View {
             Spacer()
             VStack(alignment: .trailing) {
                 Text((card?.rank.ordinal).orEmpty)
-                    .font(.headline)
+                    .font(.title3)
                     .fontWeight(.bold)
             }
         }
