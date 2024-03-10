@@ -18,6 +18,12 @@ Explore the visually striking statement card display to identify the current lea
 2. Finally, navigate to the root folder run Xcode
 <br><br>
 
+## Important Note on Unit test
+
+**Please Note:** To execute unit tests, ensure that you run them twice to ensure all tests are accurately executed. I've employed the snapshot testing framework. We should only automatically record if no screenshot exists for this test. When running unit tests for the first time, ensure that you run them twice to generate the appropriate screens for UI testing.
+**Test coverage: 82.8%** 
+
+
 ## How to use app
 Access the application to view two sections: the initial card view showcases the current user data and allows you to locate your rank in the leaderboard table. Furthermore, you have the option to click on each item in the table to access additional details.
 
@@ -31,6 +37,9 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 * **Domain Layer** = Entities + Use Cases + Repositories Interfaces
 * **Data Repositories Layer** = Repositories Implementations + API (Network)
 * **Presentation Layer (MVVM)** = ViewModels + Views
+
+### Dependency Direction
+![Alt text](README_FILES/CleanArchitectureDependencies.png?raw=true "Modules Dependencies")
 
 ### Folder Structure
 
@@ -57,9 +66,7 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 ┃ ┃ ┃ ┣ 📂ViewModels
 ┃ ┃ ┃ ┗ 📂Views
 ┗ 📜VitalityApp.swift => The app entry point.
-
-### Dependency Direction
-![Alt text](README_FILES/CleanArchitectureDependencies.png?raw=true "Modules Dependencies")
+```
 
 * **VitalityApp**(iOS Project): This folder contains the resources, source files and all other miscellaneous files to build the iOS project. This folder is further branched into:
 	 The app is completely written in SwiftUI/Combine.
@@ -71,8 +78,7 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 
 ## What needs to be improved ##
 ### Required
-1. Improve unit test coverage.
-2. Update persistence logic when we integrate API
+1. Revise the persistence logic during the integration of the API.
 
 ### Tools have the capacity to be incorporated.
  1. - [Arkana](https://github.com/rogerluan/arkana) is used to handle/manage/store project keys secretely.
