@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+enum HomeViewEvent {
+    case onTapLeader(String)
+    case retryLoadStatement
+    case loadStatement
+}
+
+enum HomeViewState: Comparable {
+    case idle
+    case isLoading
+    case finished
+    case error(String)
+}

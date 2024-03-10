@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct LeaderView: View {
+    let leader: LeaderBoard
+    let userId: Int?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(leader.getLeaderTitle(leaderId: userId)).bold()
+                Text(leader.getPointTitle())
+            }
+            Spacer()
+            Text((leader.rank.ordinal).orEmpty).foregroundStyle(.secondary)
+                .font(.subheadline)
+        }.padding(.horizontal, Dimensions.space4)
     }
 }
 
 #Preview {
-    LeaderView()
+    LeaderView(leader: MockData.leaderBoard, userId: 123)
 }

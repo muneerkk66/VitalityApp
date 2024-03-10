@@ -11,7 +11,7 @@ final class StatementLocalDataSource {
 
     private let realmProvider = RealmProvider()
 
-	@BackgroundActor
+    @BackgroundActor
     func fetchStatement() async -> StatementModel? {
         guard let storage = await realmProvider.realm() else { return nil }
         return storage.objects(StatementModel.self).first

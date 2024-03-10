@@ -9,8 +9,17 @@ import Foundation
 
 struct UserCard: Equatable {
     let userId: Int
-    let displayName: String
+    let fullName: String
     let totalPoints: Int
-    let rankValue: String
-    let status: String
+    let rank: Int
+    var status: String
+}
+
+extension UserCard {
+    func getCardTitle() -> String {
+        return String(describing: "Hey, \(fullName)")
+    }
+    func vitalityStatus() -> String {
+        return String(describing: "\(status) Status")
+    }
 }

@@ -23,8 +23,8 @@ struct HomeCoordinatorView: View {
     @ViewBuilder
     private func destination(_ screen: HomeCoordinator.Screen) -> some View {
         switch screen {
-        case .details:
-            DetailView()
+        case .details(let name):
+            DetailView(name: name)
         }
     }
 }

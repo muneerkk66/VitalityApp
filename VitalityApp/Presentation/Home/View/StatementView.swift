@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct StatementView: View {
+    @ObservedObject var viewModel: HomeViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            ScrollView {
+                Spacer(minLength: Dimensions.space80)
+                VStack(alignment: .leading) {
+                    Text((viewModel.statement?.card.getCardTitle()).orEmpty)
+                        .font(.system(size: Styles.fontSize.textLarge))
+                        .bold()
+                        .foregroundColor(.black)
+                        .padding(.horizontal, Dimensions.space20)
+                    CardView(card: viewModel.statement?.card).listStyle(.plain)
+                    LeaderBoardView(statement: viewModel.statement).frame(width: proxy.size.width, height: proxy.size.height)
+                }
+            }
+            .scrollContentBackground(.hidden)
+            .background(Color(UIColor.secondarySystemBackground))
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 #Preview {
-    StatementView()
+    StatementView(viewModel: Resolver.shared.resolve(HomeViewModel.self))
 }

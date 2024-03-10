@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ErrorView: View {
+    let errorMessage: String
+    let retryAction: () -> Void
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(errorMessage)
+                .foregroundColor(.red)
+                .multilineTextAlignment(.center)
+                .padding()
+
+            Button(action: retryAction) {
+                Text("Retry")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(Dimensions.space8)
+            }
+        }
+        .padding()
     }
 }
 
 #Preview {
-    ErrorView()
+    ErrorView(errorMessage: "") {
+
+    }
 }

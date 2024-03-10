@@ -13,7 +13,7 @@ extension LeaderboardResponse {
             userId: leaderId,
             name: name,
             totalPoints: totalPoints,
-            rankValue: rank
+            rank: rank
         )
     }
 

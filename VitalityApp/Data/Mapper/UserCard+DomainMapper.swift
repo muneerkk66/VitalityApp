@@ -14,9 +14,9 @@ extension StatementResponse {
         let user = User(name: name, surname: surname)
         return UserCard(
             userId: userId,
-            displayName: user.fullName(),
+            fullName: user.fullName(),
             totalPoints: totalPoints,
-            rankValue: rank,
+            rank: rank,
             status: vitalityStatus
         )
     }
@@ -27,20 +27,21 @@ extension StatementResponse {
             userId: leaderId,
             name: name,
             totalPoints: totalPoints,
-            rankValue: rank
+            rank: rank
         )
     }
 
     // Calculate rank based on totalPoints
-    public func calculateRank(leaderId: Int) -> String {
+    public func calculateRank(leaderId: Int) -> Int {
         var leaderboardWithMainUser = leaderboard
         let mainLeader = LeaderboardResponse(userId: userId, name: name, totalPoints: totalPoints)
         leaderboardWithMainUser.append(mainLeader)
         let sortedLeaderboard = leaderboardWithMainUser.sorted { $0.totalPoints > $1.totalPoints }
         if let index = sortedLeaderboard.firstIndex(where: { $0.userId == leaderId }) {
-            return (index + 1).ordinal ?? ""
+            return (index + 1)
         }
 
-        return ""
+        return 0
     }
+
 }

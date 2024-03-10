@@ -7,8 +7,6 @@
 
 import Foundation
 
-@testable import VitalityApp
-
 struct MockData {
     static let statementResponse = StatementResponse(
         userId: 1,
@@ -20,5 +18,9 @@ struct MockData {
     )
 
     static let leader = LeaderboardResponse(userId: 2, name: "test", totalPoints: 2)
+
+    static let userCard = UserCard(userId: 1, fullName: "", totalPoints: 1, rank: 1, status: "")
+
+    static let leaderBoard = LeaderBoard(userId: 1, name: "test", totalPoints: 1, rank: 1)
 
 }

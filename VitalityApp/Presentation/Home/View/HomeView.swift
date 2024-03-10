@@ -4,9 +4,22 @@ import Combine
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel = Resolver.shared.resolve(HomeViewModel.self)
+
     var body: some View {
-        Text("Hello World").onAppear {
-            viewModel.fetchStatement()
+        sceneView.onAppear {
+            viewModel.handle(.loadStatement)
+        }
+    }
+    // TODO: Based on the actual API integration, this feature should be updated to include a loader view.
+    @ViewBuilder
+    private var sceneView: some View {
+        switch viewModel.viewState {
+        case .idle, .finished, .isLoading:
+            StatementView(viewModel: viewModel)
+        case .error(let error):
+            ErrorView(errorMessage: error) {
+                viewModel.handle(.retryLoadStatement)
+            }
         }
     }
 }

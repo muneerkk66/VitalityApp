@@ -11,5 +11,5 @@ import Foundation
 
 @MainActor
 protocol HomeCoordinatorProtocol {
-    func showDetailView()
+    func showDetailView(name: String)
 }

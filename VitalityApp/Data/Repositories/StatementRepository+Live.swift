@@ -20,7 +20,7 @@ final class StatementRepositoryLive: StatementRepository {
     private var loadedStatement: StatementResponse?
 
     // TODO: Consider calling Data from Local when we integrate the actual API
-	// Used localDataSource fetchStatement() for calling Model from DB
+    // Used localDataSource fetchStatement() for calling Model from DB
     func loadStatement() -> AnyPublisher<Statement, APIError> {
         return statementService
             .fetchStatement()
@@ -29,7 +29,7 @@ final class StatementRepositoryLive: StatementRepository {
                 let userCardModel = result.toCardDomain(leaderId: result.userId)
                 let leaderBoardModel = result.leaderboard
                     .map {$0.toLeaderBoardDomain(leaderId: $0.userId, statementResponse: result)}
-                    .sorted {$0.rankValue < $1.rankValue}
+                    .sorted {$0.rank < $1.rank}
 
                 // Save Data in DB
                 self?.saveStatement(response: result)

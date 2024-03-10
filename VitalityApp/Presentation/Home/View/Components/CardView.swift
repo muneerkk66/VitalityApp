@@ -8,67 +8,68 @@
 import SwiftUI
 
 struct CardView: View {
+    let card: UserCard?
 
-	let card: UserCard?
+    var body: some View {
+        VStack(alignment: .leading, spacing: Dimensions.space16) {
+            header
+            Spacer()
+            footer
+        }
+        .frame(height: Dimensions.cardViewHight)
+        .foregroundColor(.white)
+        .padding(Dimensions.space12)
+        .background(
+            Color(.lightRed)
+                .overlay(
+                    RoundedRectangle(cornerRadius: Dimensions.space16)
+                        .stroke(Color.secondary.opacity(0.5), lineWidth: 1.5)
+                )
+        )
+        .cornerRadius(Dimensions.space16)
+        .shadow(color: .gray, radius: Dimensions.space4, x: 0, y: Dimensions.space2)
+        .padding(.horizontal, Dimensions.space20)
+    }
 
-	var body: some View {
-		VStack(alignment: .leading,spacing: 16){
-			HStack(alignment:.top){
-				VStack(alignment: .leading){
-					Text(String(card?.totalPoints ?? 0))
-						.font(.title)
-						.fontWeight(.bold)
+    @ViewBuilder
+    private var header: some View {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading) {
+                Text(String(card?.totalPoints ?? 0))
+                    .font(.title)
+                    .fontWeight(.bold)
 
-					Text("TOTAL POINTS")
-						.font(.headline)
-						.fontWeight(.regular)
-				}
-				Spacer()
-				VStack(alignment:.trailing){
-					Text(card?.rankValue ?? "")
-						.font(.headline)
-						.fontWeight(.bold)
+				Text(Strings.CardView.title.uppercased())
+                    .font(.headline)
+                    .fontWeight(.medium)
+            }
+            Spacer()
+            VStack(alignment: .trailing) {
+                Text((card?.rank.ordinal).orEmpty)
+                    .font(.headline)
+                    .fontWeight(.bold)
+            }
+        }
+    }
 
-				}
-			}
-
-			Spacer()
-
-			HStack(alignment:.bottom,spacing: 8){
-				VStack(alignment: .leading){
-					Image(.logo)
-						.resizable()
-						.scaledToFit()
-						.frame(height: 80)
-						.clipped()
-				}
-				Spacer()
-				VStack(alignment: .leading){
-					Text(card?.status ?? "")
-						.font(.headline)
-						.fontWeight(.regular)
-				}
-			}
-		}
-		.frame(height:200)
-		.foregroundColor(.white)
-		.padding(12)
-		.background(
-			Color(.lightRed)
-				.overlay(
-					RoundedRectangle(cornerRadius: 16)
-						.stroke(Color.secondary.opacity(0.5),lineWidth: 1.5)
-				)
-		)
-
-		.cornerRadius(16)
-		.shadow(color: .gray, radius: 5, x: 0, y: 2) // Add shadow here
-		.padding(.horizontal)
-		.padding(.top,8)
-	}
+    @ViewBuilder
+    private var footer: some View {
+        HStack(alignment: .bottom, spacing: Dimensions.space8) {
+            Image(.logo)
+                .resizable()
+                .scaledToFit()
+                .frame(height: Dimensions.space80)
+                .clipped()
+            Spacer()
+            Text((card?.vitalityStatus()).orEmpty)
+                .font(.subheadline)
+                .fontWeight(.medium)
+        }
+    }
 }
 
-
-#Preview {
-	CardView(card:MockData.userCard)
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(card: MockData.userCard)
+    }
 }
