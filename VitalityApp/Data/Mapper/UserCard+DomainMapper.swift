@@ -8,7 +8,6 @@
 import Foundation
 
 extension StatementResponse {
-
     func toCardDomain(leaderId: Int) -> UserCard {
         let rank = calculateRank(leaderId: leaderId)
         let user = User(name: name, surname: surname)
@@ -20,7 +19,6 @@ extension StatementResponse {
             status: vitalityStatus
         )
     }
-
     func toLeaderBoardDomain(leaderId: Int) -> Leader {
         let rank = calculateRank(leaderId: leaderId)
         return Leader(

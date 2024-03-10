@@ -15,10 +15,10 @@ struct Leader: Equatable {
 
 extension Leader {
     func getPointTitle() -> String {
-		return String(describing: "\(totalPoints.delimiter.orEmpty) \(totalPoints.points.orEmpty)")
+        return String(describing: "\(totalPoints.delimiter.orEmpty) \(totalPoints.points.orEmpty)")
     }
 
     func getLeaderTitle(userId: Int?) -> String {
-		return String(describing: userId == leaderId ? Strings.LeaderBoard.currentUserTitle : name).capitalized
+        return String(describing: userId == leaderId ? Strings.LeaderBoard.currentUserTitle : name).capitalized
     }
 }

@@ -17,9 +17,9 @@ struct UserCard: Equatable {
 
 extension UserCard {
     func getCardTitle() -> String {
-        return String(describing: "Hey, \(fullName)")
+        return String(describing: "\(Strings.CardView.titleGreetings), \(fullName)")
     }
     func vitalityStatus() -> String {
-        return String(describing: "\(status) Status")
+        return String(describing: "\(status) \(Strings.CardView.statusPostFix)")
     }
 }

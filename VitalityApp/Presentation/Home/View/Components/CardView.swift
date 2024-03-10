@@ -39,7 +39,7 @@ struct CardView: View {
                     .font(.title)
                     .fontWeight(.bold)
 
-				Text(Strings.CardView.title.uppercased())
+                Text(Strings.CardView.totalPoints.uppercased())
                     .font(.headline)
                     .fontWeight(.medium)
             }
@@ -70,6 +70,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: MockData.userCard)
+        CardView(card: PreviewData.userCard)
     }
 }

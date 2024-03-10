@@ -6,8 +6,12 @@
 //
 
 import Foundation
+protocol StatementLocalDataSource {
+    func fetchStatement() async -> StatementModel?
+    func saveStatement(_ object: StatementModel) async
+}
 
-final class StatementLocalDataSource {
+final class StatementLocalDataSourceLive: StatementLocalDataSource {
 
     private let realmProvider = RealmProvider()
 

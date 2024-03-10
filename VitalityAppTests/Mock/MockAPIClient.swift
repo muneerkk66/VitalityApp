@@ -2,15 +2,17 @@
 //  MockStatementService.swift
 //  VitalityAppTests
 //
-//  Created by Muneer K K on 10/03/2024.
+//  Created by Muneer K K on 09/03/2024.
 //
 
 import Foundation
 import Combine
 @testable import VitalityApp
+import Network
 
-struct MockStatementService: StatementService {
-    func fetchStatement() -> AnyPublisher<StatementResponse, APIError> {
+// Mock class to replace the actual implementation of APIClient
+struct MockAPIClient: APIClient {
+    func request<T: Decodable>() -> AnyPublisher<T, APIError> {
         guard let fileURL = Bundle.main.url(forResource: AppEnvironment.development.jsonFile, withExtension: "json") else {
             return Fail(error: APIError.fileNotFound)
                 .eraseToAnyPublisher()
@@ -18,7 +20,7 @@ struct MockStatementService: StatementService {
         do {
             let jsonData = try Data(contentsOf: fileURL)
             return Just(jsonData)
-                .decode(type: StatementResponse.self, decoder: JSONDecoder())
+                .decode(type: T.self, decoder: JSONDecoder())
                 .mapError { _ in APIError.applicationError }
                 .eraseToAnyPublisher()
         } catch {
@@ -26,5 +28,4 @@ struct MockStatementService: StatementService {
                 .eraseToAnyPublisher()
         }
     }
-
 }

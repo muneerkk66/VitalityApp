@@ -20,7 +20,7 @@ struct StatementView: View {
                         .bold()
                         .foregroundColor(.black)
                         .padding(.horizontal, Dimensions.space20)
-					
+
                     CardView(card: viewModel.statement?.userCard).listStyle(.plain)
 
                     LeaderBoardView(statement: viewModel.statement).frame(width: proxy.size.width, height: proxy.size.height)

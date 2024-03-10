@@ -10,7 +10,7 @@ import Foundation
 final class APIClientLive: APIClient {
 
     func request<T: Decodable>() -> AnyPublisher<T, APIError> {
-        guard let fileURL = Bundle.main.url(forResource: AppEnvironment.qa.jsonFile, withExtension: "json") else {
+        guard let fileURL = Bundle.main.url(forResource: AppEnvironment.development.jsonFile, withExtension: "json") else {
             return Fail(error: APIError.fileNotFound).eraseToAnyPublisher()
         }
         LogInfo("Loading Response from:\n\(fileURL)")

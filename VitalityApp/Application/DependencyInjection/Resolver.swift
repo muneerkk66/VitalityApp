@@ -34,7 +34,7 @@ extension Resolver {
         }.inObjectScope(.container)
 
         container.register(StatementLocalDataSource.self) { _ in
-            StatementLocalDataSource()
+            StatementLocalDataSourceLive()
         }.inObjectScope(.container)
 
     }

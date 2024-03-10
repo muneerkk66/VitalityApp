@@ -19,14 +19,7 @@ private var numberFormatter: NumberFormatter = {
     return numberFormatter
 }()
 
-private var formatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    formatter.locale = Locale(identifier: "en")
-    formatter.numberStyle = .decimal
-    formatter.maximumFractionDigits = 0
-    return formatter
-}()
-
+// MARK: this is based on the Localizable strings dict plural
 private var pointFormatterString: String = {
     let formatString: String = NSLocalizedString("statement points",
                                                  comment: "statement points count string format to be found in Localizable.stringsdict")

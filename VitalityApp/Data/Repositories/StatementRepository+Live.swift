@@ -10,9 +10,9 @@ import Combine
 final class StatementRepositoryLive: StatementRepository {
 
     private var localDataSource: StatementLocalDataSource
-    private let statementService: StatementServiceLive
+    private let statementService: StatementService
 
-    init(localDataSource: StatementLocalDataSource, statementService: StatementServiceLive) {
+    init(localDataSource: StatementLocalDataSource, statementService: StatementService) {
         self.localDataSource = localDataSource
         self.statementService = statementService
     }
@@ -34,7 +34,7 @@ final class StatementRepositoryLive: StatementRepository {
                 // Save Data in DB
                 self?.saveStatement(response: result)
 
-				let statement =  Statement(userCard: userCardModel, leaderboard: leaderBoardModel)
+                let statement =  Statement(userCard: userCardModel, leaderboard: leaderBoardModel)
 
                 return statement
 

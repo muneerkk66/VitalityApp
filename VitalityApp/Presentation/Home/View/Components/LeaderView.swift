@@ -24,5 +24,5 @@ struct LeaderView: View {
 }
 
 #Preview {
-    LeaderView(leader: MockData.leaderBoard, currentUserId: 123)
+    LeaderView(leader: PreviewData.leader, currentUserId: PreviewData.leader.leaderId)
 }

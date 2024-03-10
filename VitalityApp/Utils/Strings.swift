@@ -9,11 +9,13 @@ import Foundation
 
 struct Strings {
     enum CardView {
-        static let title = "Total points"
+        static let totalPoints = "Total points"
+        static let titleGreetings = "Hey"
+        static let statusPostFix = "Status"
     }
     enum LeaderBoard {
         static let title = "Leaderboard"
-		static let currentUserTitle = "You"
+        static let currentUserTitle = "You"
     }
 
 }

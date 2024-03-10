@@ -7,6 +7,7 @@
 
 import Combine
 protocol StatementService {
+    @discardableResult
     func fetchStatement(
     ) -> AnyPublisher<StatementResponse, APIError>
 }

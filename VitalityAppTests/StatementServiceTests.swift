@@ -21,11 +21,16 @@ final class StatementServiceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        let page = 1
-        let searchText = "Test"
+    func testFetchStatementWithFormattedData() throws {
         let result = try awaitPublisher(model.fetchStatement())
         XCTAssertTrue(try XCTUnwrap(result.leaderboard.count) > 0)
+
+        // Verify Rank calculation
+        let card = result.toCardDomain(leaderId: result.userId)
+        XCTAssertGreaterThan(card.rank, 0)
+        let leader = result.toLeaderBoardDomain(leaderId: try XCTUnwrap( result.leaderboard.first?.userId))
+        XCTAssertGreaterThan(leader.rank, 0)
+
     }
 
     func testPerformanceExample() throws {
