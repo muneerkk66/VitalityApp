@@ -1,10 +1,37 @@
 import XCTest
+import SnapshotTesting
+@testable import VitalityApp
 
+@MainActor
 final class VitalityAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+
+	func testDefaultAppearanceWithSuccess ( ) {
+		let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchStatementUseCase: MockFetchStatementUseCase.success(with: MockResponse.statement)))
+
+		assertSnapshot(of: contentView.toVC(), as: .image)
+	}
+
+	func testDefaultAppearanceWithError ( ) {
+		let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchStatementUseCase: MockFetchStatementUseCase.failure(error: APIError.applicationError)))
+
+		assertSnapshot(of: contentView.toVC(), as: .image)
+	}
+
+	func testStatementView ( ) {
+		let statementView = StatementView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchStatementUseCase: MockFetchStatementUseCase.success(with: MockResponse.statement)))
+
+		assertSnapshot(of: statementView.toVC(), as: .image)
+	}
+
+	func testErroView() {
+		let errorView = ErrorView(errorMessage: "error") {}
+		assertSnapshot(of: errorView.toVC(), as: .image)
+	}
+
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

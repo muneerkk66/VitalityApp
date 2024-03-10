@@ -12,6 +12,8 @@
 		081364DA2B9E22CF00C2C8B7 /* MockStatementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081364D92B9E22CF00C2C8B7 /* MockStatementService.swift */; };
 		081364DC2B9E232800C2C8B7 /* MockStatementLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081364DB2B9E232800C2C8B7 /* MockStatementLocalDataSource.swift */; };
 		081364DD2B9E287C00C2C8B7 /* StatementResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A412AFA3B0E002D2027 /* StatementResponse.swift */; };
+		081364E02B9E3A3700C2C8B7 /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081364DF2B9E3A3700C2C8B7 /* SwiftUI.swift */; };
+		081364E32B9E3B1400C2C8B7 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 081364E22B9E3B1400C2C8B7 /* SnapshotTesting */; };
 		083E82682B9CC9DB00ECD2DC /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */; };
 		083E826A2B9CCAFD00ECD2DC /* StatementLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */; };
 		083E82712B9CCCBB00ECD2DC /* CombinePublisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */; };
@@ -87,6 +89,7 @@
 		081364D72B9E21CF00C2C8B7 /* StatementRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRepositoryTests.swift; sourceTree = "<group>"; };
 		081364D92B9E22CF00C2C8B7 /* MockStatementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementService.swift; sourceTree = "<group>"; };
 		081364DB2B9E232800C2C8B7 /* MockStatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementLocalDataSource.swift; sourceTree = "<group>"; };
+		081364DF2B9E3A3700C2C8B7 /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
 		083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementLocalDataSource.swift; sourceTree = "<group>"; };
 		083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublisherTest.swift; sourceTree = "<group>"; };
@@ -164,12 +167,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081364E32B9E3B1400C2C8B7 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		081364E12B9E3B1400C2C8B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		083E826B2B9CCBC000ECD2DC /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */,
+				081364DF2B9E3A3700C2C8B7 /* SwiftUI.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,6 +451,7 @@
 				538A0A092AF8D572002D2027 /* VitalityApp */,
 				53B9B0DA2AFBC4FD0004B381 /* VitalityAppTests */,
 				538A0A082AF8D572002D2027 /* Products */,
+				081364E12B9E3B1400C2C8B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -535,6 +548,9 @@
 				53B9B0DE2AFBC4FD0004B381 /* PBXTargetDependency */,
 			);
 			name = VitalityAppTests;
+			packageProductDependencies = (
+				081364E22B9E3B1400C2C8B7 /* SnapshotTesting */,
+			);
 			productName = VitalityOnboardingAssessmentTests;
 			productReference = 53B9B0D92AFBC4FD0004B381 /* VitalityAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -570,6 +586,7 @@
 			packageReferences = (
 				538A0A182AF8D5C4002D2027 /* XCRemoteSwiftPackageReference "Swinject" */,
 				538A0A242AF8E6E8002D2027 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				081364DE2B9E39F300C2C8B7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 538A0A082AF8D572002D2027 /* Products */;
 			projectDirPath = "";
@@ -663,6 +680,7 @@
 				083E82712B9CCCBB00ECD2DC /* CombinePublisherTest.swift in Sources */,
 				083E829C2B9E0D6700ECD2DC /* MockFetchStatementUseCase.swift in Sources */,
 				083E829E2B9E0EDE00ECD2DC /* MockHomeCoordinator.swift in Sources */,
+				081364E02B9E3A3700C2C8B7 /* SwiftUI.swift in Sources */,
 				081364DC2B9E232800C2C8B7 /* MockStatementLocalDataSource.swift in Sources */,
 				081364D82B9E21CF00C2C8B7 /* StatementRepositoryTests.swift in Sources */,
 				083E82752B9CCD4B00ECD2DC /* MockAPIClient.swift in Sources */,
@@ -930,6 +948,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		081364DE2B9E39F300C2C8B7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.4;
+			};
+		};
 		538A0A182AF8D5C4002D2027 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -949,6 +975,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		081364E22B9E3B1400C2C8B7 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 081364DE2B9E39F300C2C8B7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
 		538A0A192AF8D5C4002D2027 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 538A0A182AF8D5C4002D2027 /* XCRemoteSwiftPackageReference "Swinject" */;
