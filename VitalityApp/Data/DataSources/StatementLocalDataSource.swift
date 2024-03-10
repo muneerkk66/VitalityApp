@@ -13,7 +13,11 @@ protocol StatementLocalDataSource {
 
 final class StatementLocalDataSourceLive: StatementLocalDataSource {
 
-    private let realmProvider = RealmProvider()
+    private let realmProvider: RealmProvider
+
+    init(realmProvider: RealmProvider) {
+        self.realmProvider = realmProvider
+    }
 
     @BackgroundActor
     func fetchStatement() async -> StatementModel? {

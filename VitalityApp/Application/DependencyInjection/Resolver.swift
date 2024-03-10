@@ -13,6 +13,7 @@ final class Resolver {
         injectCoordinator()
         injectUtils()
         injectServices()
+        injectDataSources()
         injectRepositories()
         injectUseCases()
         injectViewModels()
@@ -33,8 +34,8 @@ extension Resolver {
             APIClientLive()
         }.inObjectScope(.container)
 
-        container.register(StatementLocalDataSource.self) { _ in
-            StatementLocalDataSourceLive()
+        container.register(RealmProvider.self) { _ in
+            RealmProvider()
         }.inObjectScope(.container)
 
     }
@@ -61,6 +62,17 @@ extension Resolver {
     private func injectServices() {
         container.register(StatementServiceLive.self) { resolver in
             StatementServiceLive(apiClient: resolver.resolve(APIClientLive.self)!)
+        }.inObjectScope(.container)
+
+    }
+}
+
+// MARK: - Injecting DataSources -
+
+extension Resolver {
+    private func injectDataSources() {
+        container.register(StatementLocalDataSource.self) { resolver in
+            StatementLocalDataSourceLive(realmProvider: resolver.resolve(RealmProvider.self)!)
         }.inObjectScope(.container)
 
     }
