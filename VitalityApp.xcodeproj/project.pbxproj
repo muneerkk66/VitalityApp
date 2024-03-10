@@ -14,6 +14,7 @@
 		081364DD2B9E287C00C2C8B7 /* StatementResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538A0A412AFA3B0E002D2027 /* StatementResponse.swift */; };
 		081364E02B9E3A3700C2C8B7 /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081364DF2B9E3A3700C2C8B7 /* SwiftUI.swift */; };
 		081364E32B9E3B1400C2C8B7 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 081364E22B9E3B1400C2C8B7 /* SnapshotTesting */; };
+		081364E52B9E4FF900C2C8B7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 081364E42B9E4FF900C2C8B7 /* README.md */; };
 		083E82682B9CC9DB00ECD2DC /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */; };
 		083E826A2B9CCAFD00ECD2DC /* StatementLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */; };
 		083E82712B9CCCBB00ECD2DC /* CombinePublisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */; };
@@ -90,6 +91,7 @@
 		081364D92B9E22CF00C2C8B7 /* MockStatementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementService.swift; sourceTree = "<group>"; };
 		081364DB2B9E232800C2C8B7 /* MockStatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStatementLocalDataSource.swift; sourceTree = "<group>"; };
 		081364DF2B9E3A3700C2C8B7 /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
+		081364E42B9E4FF900C2C8B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		083E82672B9CC9DB00ECD2DC /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		083E82692B9CCAFD00ECD2DC /* StatementLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementLocalDataSource.swift; sourceTree = "<group>"; };
 		083E82702B9CCCBB00ECD2DC /* CombinePublisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublisherTest.swift; sourceTree = "<group>"; };
@@ -181,6 +183,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		081364E62B9E553300C2C8B7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				08D5E9A42B9BA50600A2C82F /* DetailView */,
+				08D5E9842B9B97F300A2C82F /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		083E826B2B9CCBC000ECD2DC /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,12 +240,12 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
-		083E827A2B9CFF5600ECD2DC /* Components */ = {
+		083E827A2B9CFF5600ECD2DC /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
 				083E82852B9D182D00ECD2DC /* ErrorView.swift */,
 			);
-			path = Components;
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		083E82822B9D0C1D00ECD2DC /* Components */ = {
@@ -250,7 +261,6 @@
 		08D5E97D2B9B887700A2C82F /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				538A0A0A2AF8D572002D2027 /* VitalityApp.swift */,
 				538A0A382AF912A4002D2027 /* DependencyInjection */,
 			);
 			path = Application;
@@ -259,9 +269,8 @@
 		08D5E97E2B9B888100A2C82F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				083E827A2B9CFF5600ECD2DC /* Components */,
-				08D5E9A42B9BA50600A2C82F /* DetailView */,
-				08D5E9842B9B97F300A2C82F /* Home */,
+				081364E62B9E553300C2C8B7 /* Screens */,
+				083E827A2B9CFF5600ECD2DC /* ReusableViews */,
 				08D5E9832B9B97D600A2C82F /* AppCoordinator */,
 			);
 			path = Presentation;
@@ -283,7 +292,7 @@
 				08D5E9CF2B9C8DD500A2C82F /* Mapper */,
 				08D5E98A2B9B98B700A2C82F /* Network */,
 				083E826D2B9CCBD900ECD2DC /* DataSources */,
-				08D5E9892B9B98AC00A2C82F /* Presistant */,
+				08D5E9892B9B98AC00A2C82F /* Persistence */,
 				08D5E9882B9B989000A2C82F /* Repositories */,
 			);
 			path = Data;
@@ -360,12 +369,12 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		08D5E9892B9B98AC00A2C82F /* Presistant */ = {
+		08D5E9892B9B98AC00A2C82F /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
 				083E826B2B9CCBC000ECD2DC /* Realm */,
 			);
-			path = Presistant;
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		08D5E98A2B9B98B700A2C82F /* Network */ = {
@@ -448,6 +457,7 @@
 		538A09FE2AF8D572002D2027 = {
 			isa = PBXGroup;
 			children = (
+				081364E42B9E4FF900C2C8B7 /* README.md */,
 				538A0A092AF8D572002D2027 /* VitalityApp */,
 				53B9B0DA2AFBC4FD0004B381 /* VitalityAppTests */,
 				538A0A082AF8D572002D2027 /* Products */,
@@ -467,13 +477,14 @@
 		538A0A092AF8D572002D2027 /* VitalityApp */ = {
 			isa = PBXGroup;
 			children = (
-				08D5E9DE2B9CB68300A2C82F /* Resources */,
 				08D5E97D2B9B887700A2C82F /* Application */,
-				08D5E97E2B9B888100A2C82F /* Presentation */,
-				08D5E97F2B9B888C00A2C82F /* Domain */,
 				08D5E9802B9B889400A2C82F /* Data */,
-				08D5E9812B9B889A00A2C82F /* Utils */,
+				08D5E97F2B9B888C00A2C82F /* Domain */,
+				08D5E97E2B9B888100A2C82F /* Presentation */,
 				530F7E8A2AFBC95100883A8B /* API */,
+				08D5E9DE2B9CB68300A2C82F /* Resources */,
+				08D5E9812B9B889A00A2C82F /* Utils */,
+				538A0A0A2AF8D572002D2027 /* VitalityApp.swift */,
 				538A0A0E2AF8D575002D2027 /* Assets.xcassets */,
 				538A0A102AF8D575002D2027 /* Preview Content */,
 			);
@@ -614,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081364E52B9E4FF900C2C8B7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +847,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -865,7 +877,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
