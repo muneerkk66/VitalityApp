@@ -8,8 +8,8 @@ Explore the visually striking statement card display to identify the current lea
 - iOS 16+
 - SwiftUI
 - Swift Package Manager(SPM) Dependencies
-	- Relam(https://github.com/realm/realm-swift)
-	- SwiftInj(https://github.com/Swinject/Swinject)
+	- [Relam](https://github.com/realm/realm-swift)
+	- [SwiftInj](https://github.com/Swinject/Swinject)
 	- [Swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing)
 
   
@@ -20,8 +20,7 @@ Explore the visually striking statement card display to identify the current lea
 
 ## Important Note on Unit test
 
-**Please Note:** To execute unit tests, ensure that you run them twice to ensure all tests are accurately executed. I've employed the snapshot testing framework. We should only automatically record if no screenshot exists for this test. When running unit tests for the first time, ensure that you run them twice to generate the appropriate screens for UI testing.
-**Test coverage: 82.8%** 
+**Please Note:** To execute unit tests, ensure that you run them twice to ensure all tests are accurately executed. I've employed the snapshot testing framework. We should only automatically record if no screenshot exists for this test. When running unit tests for the first time, ensure that you run them twice to generate the appropriate screens for UI testing.  **Test coverage: 82.8%** 
 
 
 ## How to use app
@@ -41,6 +40,12 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 ### Dependency Direction
 ![Alt text](README_FILES/CleanArchitectureDependencies.png?raw=true "Modules Dependencies")
 
+
+
+* **VitalityApp**(iOS Project): This folder contains the resources, source files and all other miscellaneous files to build the iOS project. This folder is further branched into:
+	 The app is completely written in SwiftUI/Combine.
+	 
+	 
 ### Folder Structure
 
 ```markdown
@@ -67,9 +72,6 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 ┃ ┃ ┃ ┗ 📂Views
 ┗ 📜VitalityApp.swift => The app entry point.
 ```
-
-* **VitalityApp**(iOS Project): This folder contains the resources, source files and all other miscellaneous files to build the iOS project. This folder is further branched into:
-	 The app is completely written in SwiftUI/Combine.
 	 
 ## Includes
 * Statement screen with user point card view
