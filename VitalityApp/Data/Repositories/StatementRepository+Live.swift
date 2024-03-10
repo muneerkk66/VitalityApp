@@ -19,8 +19,12 @@ final class StatementRepositoryLive: StatementRepository {
 
     private var loadedStatement: StatementResponse?
 
-    // TODO: Consider calling Data from Local when we integrate the actual API
-    // Used localDataSource fetchStatement() for calling Model from DB
+    // TODO: Optimise data loading by initially fetching from local storage before integrating with the actual API. This will reduce loading times. Background tasks can then fetch remote data and update the database, ensuring the latest data is displayed to the user.
+
+    // Use localDataSource.fetchStatement() to retrieve data from the database.
+
+    // Additionally, consider implementing StatementRemoteDataSource for handling service calls.
+
     func loadStatement() -> AnyPublisher<Statement, APIError> {
         return statementService
             .fetchStatement()

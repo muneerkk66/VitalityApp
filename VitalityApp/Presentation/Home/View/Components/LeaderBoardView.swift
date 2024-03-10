@@ -10,6 +10,7 @@ import SwiftUI
 struct LeaderBoardView: View {
     var statement: Statement?
     let onTapLeader: (String) -> Void
+
     var body: some View {
         List {
             Section(header: Text(Strings.LeaderBoard.title)) {

@@ -10,6 +10,7 @@ struct HomeView: View {
             viewModel.handle(.loadStatement)
         }
     }
+
     // TODO: Based on the actual API integration, this feature should be updated to include a loader view.
     @ViewBuilder
     private var sceneView: some View {

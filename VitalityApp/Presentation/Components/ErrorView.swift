@@ -19,7 +19,7 @@ struct ErrorView: View {
                 .padding()
 
             Button(action: retryAction) {
-                Text("Retry")
+                Text(Strings.ErrorView.erroViewTitle)
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.blue)
@@ -31,7 +31,5 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(errorMessage: "") {
-
-    }
+    ErrorView(errorMessage: "") {}
 }

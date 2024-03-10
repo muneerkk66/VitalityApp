@@ -10,6 +10,7 @@ import SwiftUI
 struct LeaderView: View {
     let leader: Leader
     let currentUserId: Int?
+
     var body: some View {
         HStack {
             VStack(alignment: .leading) {

@@ -2,7 +2,7 @@ import Foundation
 import Swinject
 
 // Resolver is a singleton class that is responsible for injecting all dependencies in the app.
-class Resolver {
+final class Resolver {
 
     static let shared = Resolver()
 

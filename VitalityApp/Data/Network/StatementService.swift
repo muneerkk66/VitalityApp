@@ -6,6 +6,7 @@
 //
 
 import Combine
+
 protocol StatementService {
     @discardableResult
     func fetchStatement(

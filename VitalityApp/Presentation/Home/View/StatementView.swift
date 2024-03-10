@@ -13,8 +13,11 @@ struct StatementView: View {
     var body: some View {
         GeometryReader { proxy in
             ScrollView {
+
                 Spacer(minLength: Dimensions.space80)
+
                 LazyVStack(alignment: .leading) {
+
                     Text((viewModel.statement?.userCard.getCardTitle()).orEmpty)
                         .font(.system(size: Styles.fontSize.textLarge))
                         .bold()
@@ -22,7 +25,9 @@ struct StatementView: View {
                         .padding(.horizontal, Dimensions.space20)
 
                     CardView(card: viewModel.statement?.userCard).listStyle(.plain)
+
                     Spacer(minLength: Dimensions.space20)
+
                     LeaderBoardView(statement: viewModel.statement, onTapLeader: { leader in
                         viewModel.handle(.onTapLeader(leader))
                     })

@@ -7,6 +7,9 @@
 
 import Foundation
 
+// TODO: this needs to replace with SwiftGen
+// https://github.com/SwiftGen/SwiftGen
+
 struct Strings {
     enum CardView {
         static let totalPoints = "Total points"
@@ -16,6 +19,10 @@ struct Strings {
     enum LeaderBoard {
         static let title = "Leaderboard"
         static let currentUserTitle = "You"
+    }
+
+    enum ErrorView {
+        static let erroViewTitle = "Retry"
     }
 
 }

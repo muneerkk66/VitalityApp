@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     let name: String
     var body: some View {
-        Text("Hello, \(name)")
+        Text("\(Strings.CardView.titleGreetings), \(name)")
     }
 }
 

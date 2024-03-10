@@ -4,7 +4,7 @@ import SwiftUI
 struct VitalityOnboardingAssessmentApp: App {
 
     init() {
-        //Injecting all dependencies
+        // Injecting all dependencies
         Resolver.shared.injectModules()
     }
 
